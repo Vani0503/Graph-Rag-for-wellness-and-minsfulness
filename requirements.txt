@@ -1,0 +1,11 @@
+pymupdf
+openai
+networkx
+matplotlib
+pyvis
+faiss-cpu
+sentence-transformers
+langchain-openai
+langchain-community
+rank_bm25
+numpy
