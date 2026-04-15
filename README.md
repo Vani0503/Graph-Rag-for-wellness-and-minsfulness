@@ -168,6 +168,28 @@ The baseline uses: LangChain + OpenAI text-embedding-3-small + FAISS + BM25 hybr
 
 **GraphRAG won: 2/10. Standard RAG won: 6/10. Ties: 2/10.**
 
+--
+
+## Objective Evaluation Results (LLM-as-Judge)
+
+Evaluated both systems on the same 10 questions using GPT-4o-mini as judge.
+Each answer scored on Faithfulness, Completeness, and Relevance (1-5 scale).
+
+| Metric | GraphRAG | Standard RAG |
+|---|---|---|
+| Faithfulness | 4.10 | 4.10 |
+| Completeness | 4.00 | 3.70 |
+| Relevance | 4.80 | 4.90 |
+| Overall | 4.30 | 4.23 |
+
+Per-question winners:
+- GraphRAG won: Q4 (dysfunctional family creation), Q6 (children roles), 
+  Q7 (breathing techniques), Q10 (law of repetition)
+- RAG won: Q1 (corrective therapy), Q2 (anxiety forms), Q3 (dysfunctional family traits)
+- Tied: Q5 (healthy family), Q8 (throat chakra), Q9 (affirmations)
+
+Key finding: GraphRAG's advantage is in Completeness — it retrieves more  comprehensive answers on category and list queries. Faithfulness is identical  across both systems. RAG has a slight edge on Relevance — answers are more concise.
+
 ---
 
 ## Key Learnings
